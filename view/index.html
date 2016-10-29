@@ -3,14 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <title>Platt Box</title>
+    <script src="https://use.fontawesome.com/f059ef59d8.js"></script>
     <style>
-        .content {
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .content, .nav-bar-content {
             width: 1080px;
             margin: auto;
+        }
+        .nav-bar-content {
+            height: 70px;
+        }
+        /* nav-bar */
+        header {
+            height: 70px;
+            background-color: #017F40;
+            box-shadow: 0 0 5px 0;
+        }
+        #logo {
+            height: 100%;
+            float: left;
+        }
+        #search {
+            width: 350px;
+            height: 100%;
+            position: relative;
+            float: right;
+            background-color: #01723A;
+        }
+        /* using font awesome for search icon */
+        #search-icon {
+            color: white;
+            right: 1px;
+        }
+        /* */
+        #search-box {
+            width: 75%;
+            height: 97%;
+            padding: 0 20px;
+            background-color: #01723A;
+            border: none;
+            color: white;
+            font-size: 1em;
+        }
+        /* remove the default focus border */
+        #search-box:focus {
+            outline: none;
+        }
+        /* change the color of the placeholder */
+        #search-box::-webkit-input-placeholder {
+            color: #039F56;
+        }
+        #search-box:-ms-input-placeholder {
+            color: #039F56;
+        }
+        #search-box:-moz-placeholder {
+            color: #039F56;
+        }
+        #search-box::-moz-placeholder {
+            color: #039F56;
         }
     </style>
 </head>
 <body>
-    <header></header>
+    <!--nav-bar-->
+    <header>
+        <div class="nav-bar-content">
+            <div id="logo">
+                <a href="#"><img src="../images/logo.png" alt="Platt Box"></a>
+            </div>
+            <div id="search">
+                <input id="search-box" type="text" placeholder="Search Customers">
+                <i id="search-icon" class="fa fa-search fa-1x" aria-hidden="true"></i>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="content">
+
+    </div>
 </body>
 </html>
