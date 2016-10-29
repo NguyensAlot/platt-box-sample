@@ -1,13 +1,13 @@
 #side-nav {
-    width: 30%;
-    height: 800px;
+    position: fixed;
+    width: 20%;
     margin-left: 10px;
     float: left;
 }
 
 #user-info {
     line-height: 15px;
-    height: 100px;
+    height: 110px;
 }
 
 #user-info p {

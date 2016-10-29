@@ -36,10 +36,15 @@
             font-weight: 900;
             color: black;
         }
-
         .side-nav-active {
             background-color: #ECECEC;
             border-radius: 25px;
+        }
+        .large-column {
+            width: 500px;
+        }
+        .cursor-pointer {
+            cursor: pointer;
         }
         #content-panel {
             width: 65%;
@@ -68,11 +73,15 @@
             background-color: black;
         }
         #files-table {
+            width: 100%;
             position:relative;
             margin: 0;
             top: 35px;
         }
-
+        #files-table tr {
+            line-height: 45px;
+            border-bottom: 1px solid lightgray;
+        }
     </style>
 </head>
 <body>
@@ -97,7 +106,7 @@
                 <img src="../images/me.jpg">
                 <i id="settings" class="fa fa-cog fa-2x"></i>
                 <br><br>
-                <p class="directory-name">Nike Inc.</p>
+                <p id="dn-title" class="directory-name">Nike Inc.</p>
                 <p id="user-email">emailaddress@domain.com</p>
             </div>
             <div class="separation-line"></div>
@@ -132,26 +141,46 @@
         <!--main content-->
         <div id="content-panel">
             <div id="content-header">
+                <!--
+                -Static value for directory
+                -For actual functionality, possible use of bootstrap breadcrumb.
+                -If directory gets too long, only display the most recent few directories and use an ellipsis
+                -->
                 <div id="directory">
                     BOX/
                     <span class="directory-name">Nike Inc./</span>
                 </div>
                 <div id="content-actions">
-                    <a class="fa fa-file-text-o fa-2x" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Upload" aria-hidden="true"></a>
-                    <a class="fa fa-folder-o fa-2x" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Add Folder" aria-hidden="true"></a>
+                    <a id="addFile" class="fa fa-file-text-o fa-2x" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Upload" aria-hidden="true"></a>
+                    <a id="addDir" class="fa fa-folder-o fa-2x" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Add Folder" aria-hidden="true"></a>
                     <a class="fa fa-trash-o fa-2x" data-toggle="popover" data-trigger="hover" data-placement="bottom"  data-content="Delete" aria-hidden="true"></a>
                 </div>
-                <table id="files-table" class="table table-striped">
-                    <tr>
-                        <th>Name</th>
-                        <th>Size</th>
-                        <th>Date</th>
-                    </tr>
-                    <tr>
-                        <td>#Name</td>
-                        <td>#Size</td>
-                        <td>#Date</td>
-                    </tr>
+                <table id="files-table">
+                    <thead>
+                        <tr>
+                            <th class="small-column"></th>
+                            <th class="large-column">Name</th>
+                            <th class="small-column">Size</th>
+                            <th class="small-column">Date</th>
+                            <th class="small-column"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="fa fa-file-text-o" aria-hidden="true"></td>
+                            <td>#Name</td>
+                            <td>#Size</td>
+                            <td>#Date</td>
+                            <td class="fa fa-ellipsis-v cursor-pointer popover-menu" data-toggle="popover" data-placement="bottom" data-content="nothing" aria-hidden="true"></td>
+                        </tr>
+                        <tr>
+                            <td class="fa fa-folder" aria-hidden="true"></td>
+                            <td>#Name</td>
+                            <td>#Size</td>
+                            <td>#Date</td>
+                            <td class="fa fa-ellipsis-v cursor-pointer popover-menu" aria-hidden="true"></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>

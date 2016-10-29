@@ -1,5 +1,6 @@
 /* nav-bar */
 header {
+    min-width: 1080px;
     height: 70px;
     background-color: #017F40;
     box-shadow: 0 0 5px 0;
