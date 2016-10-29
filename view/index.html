@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <title>Platt Box</title>
     <link rel="icon" href="../images/platt-logo.png">
-    <script src="https://use.fontawesome.com/f059ef59d8.js"></script>
-    <link href="../styles/header.css" type="text/css" rel="stylesheet">
-    <link href="../styles/side-nav.css" type="text/css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="../scripts/main.js" type="text/javascript" rel="script"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
+    <link rel="stylesheet" type="text/css" href="../styles/header.css">
+    <link rel="stylesheet" type="text/css" href="../styles/side-nav.css">
+    <script src="https://use.fontawesome.com/f059ef59d8.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script rel="script" type="text/javascript" src="../scripts/main.js"></script>
+
     <style>
         body {
             width: 100%;
@@ -28,12 +29,16 @@
         }
         .separation-line {
             width: 100%;
-            border-bottom: 2px solid lightgray;
+            border-bottom: 1px solid lightgray;
             margin: 0 5px 20px 5px;
         }
         .directory-name {
             font-weight: 900;
             color: black;
+        }
+        .side-nav-active {
+            background-color: #ECECEC;
+            border-radius: 25px;
         }
         #content-panel {
             width: 65%;
@@ -61,14 +66,12 @@
         #content-header #content-actions a:focus {
             background-color: black;
         }
-
-        #content-header ul {
-            list-style: none;
-
+        #files-table {
+            position:relative;
+            margin: 0;
+            top: 35px;
         }
-        #content-header li {
-            display: inline;
-        }
+
     </style>
 </head>
 <body>
@@ -97,29 +100,29 @@
                 <p id="user-email">emailaddress@domain.com</p>
             </div>
             <div class="separation-line"></div>
-            <ul>
-                <li>
+            <ul id="side-nav-content">
+                <li class="side-nav-text">
                     <i class="fa fa-clock-o" aria-hidden="true"></i>
                     Recent
-                </li>
-                <li>
+                </li><br>
+                <li class="side-nav-text">
                     <i class="fa fa-file-o" aria-hidden="true"></i>
                     Files
-                </li>
-                <li>
+                </li><br>
+                <li class="side-nav-text">
                     <i class="fa fa-folder" aria-hidden="true"></i>
                     Folders
-                </li>
-                <li>
+                </li><br>
+                <li class="side-nav-text">
                     <i class="fa fa-file-image-o" aria-hidden="true"></i>
                     Photos
-                </li>
-                <li>
+                </li><br>
+                <li class="side-nav-text">
                     <i class="fa fa-bell-o" aria-hidden="true"></i>
                     Notification
                     <div id="notification-alert">3</div>
-                </li>
-                <li>
+                </li><br>
+                <li class="side-nav-text">
                     <i class="fa fa-sign-out" aria-hidden="true"></i>
                     Sign Out
                 </li>
@@ -136,15 +139,21 @@
                     <a class="fa fa-folder-o fa-2x" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Add Folder" aria-hidden="true"></a>
                     <a class="fa fa-trash-o fa-2x" data-toggle="popover" data-trigger="hover" data-placement="bottom"  data-content="Delete" aria-hidden="true"></a>
                 </div>
+                <table id="files-table" class="table table-striped">
+                    <tr>
+                        <th>Name</th>
+                        <th>Size</th>
+                        <th>Date</th>
+                    </tr>
+                    <tr>
+                        <td>#Name</td>
+                        <td>#Size</td>
+                        <td>#Date</td>
+                    </tr>
+                </table>
             </div>
-            <div class="separation-line"></div>
         </div>
     </div>
 
-<script>
-    $(document).ready(function() {
-        $('[data-toggle="popover"]').popover();
-    });
-</script>
 </body>
 </html>

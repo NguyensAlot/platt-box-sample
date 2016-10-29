@@ -39,11 +39,12 @@
     color: dimgray;
     list-style: none;
 }
-#side-nav li {
-
-    line-height: 45px;
+#side-nav ul li {
+    line-height: 30px;
+    cursor: pointer;
 }
 #side-nav ul i {
+    margin-left: 10px;
     padding-right: 20px;
 }
 #notification-alert {
@@ -52,7 +53,7 @@
     background-color: #017F40;
     border-radius: 15px;
     float: right;
-    margin-top: 5px;
+    margin-top: 0;
     text-align: center;
     color: white;
     line-height: 30px;
