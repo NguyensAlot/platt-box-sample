@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Platt Box</title>
     <script src="https://use.fontawesome.com/f059ef59d8.js"></script>
-    <link href="../styles/nav-bar.css" type="text/css" rel="stylesheet">
+    <link href="../styles/header.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <style>
         body {
@@ -28,8 +28,8 @@
         #user-panel {
             width: 30%;
             height: 800px;
+            margin-left: 10px;
             float: left;
-
         }
 
         #user-info {
@@ -39,7 +39,7 @@
             margin: auto;
         }
         #user-info #user-email {
-            color: gray;
+            color: dimgray;
             font-style: italic;
             font-size: .75em;
         }
@@ -56,17 +56,32 @@
             float: right;
             position: relative;
             top: 0;
-            color: lightgray;
+            color: dimgray;
         }
         #user-panel ul {
             padding: 0;
-            color: #78797B;
+            color: dimgray;
         }
         #user-panel li {
             list-style: none;
             line-height: 45px;
         }
-
+        #user-panel ul i {
+            padding-right: 20px;
+        }
+        #notification-alert {
+            width: 30px;
+            height: 30px;
+            background-color: #017F40;
+            border-radius: 15px;
+            float: right;
+            margin-top: 5px;
+            text-indent: 10px;
+            color: white;
+            line-height: 30px;
+        }
+        #notification-alert p {
+        }
         #content-panel {
             width: 65%;
             height: 800px;
@@ -106,11 +121,27 @@
                     <i class="fa fa-clock-o"></i>
                     Recent
                 </li>
-                <li>Files</li>
-                <li>Folders</li>
-                <li>Photos</li>
-                <li>Notification</li>
-                <li>Sign Out</li>
+                <li>
+                    <i class="fa fa-file-o"></i>
+                    Files
+                </li>
+                <li>
+                    <i class="fa fa-folder"></i>
+                    Folders
+                </li>
+                <li>
+                    <i class="fa fa-file-photo-o"></i>
+                    Photos
+                </li>
+                <li>
+                    <i class="fa fa-bell-o"></i>
+                    Notification
+                    <div id="notification-alert">3</div>
+                </li>
+                <li>
+                    <i class="fa fa-sign-out"></i>
+                    Sign Out
+                </li>
             </ul>
         </div>
         <div id="content-panel">
