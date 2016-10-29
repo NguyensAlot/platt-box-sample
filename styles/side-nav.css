@@ -1,4 +1,4 @@
-#user-panel {
+#side-nav {
     width: 30%;
     height: 800px;
     margin-left: 10px;
@@ -7,7 +7,9 @@
 
 #user-info {
     line-height: 15px;
+    height: 100px;
 }
+
 #user-info p {
     margin: auto;
 }
@@ -23,23 +25,25 @@
     margin-right: 15px;
     background-color: lightgray;
     border-radius: 50px;
-    border: 1px lightgray solid;
+    border: 1px solid lightgray;
 }
 #settings {
     float: right;
     position: relative;
     top: 0;
     color: dimgray;
+    cursor: pointer;
 }
-#user-panel ul {
+#side-nav ul {
     padding: 0;
     color: dimgray;
-}
-#user-panel li {
     list-style: none;
+}
+#side-nav li {
+
     line-height: 45px;
 }
-#user-panel ul i {
+#side-nav ul i {
     padding-right: 20px;
 }
 #notification-alert {
@@ -52,4 +56,5 @@
     text-align: center;
     color: white;
     line-height: 30px;
+    cursor: pointer;
 }
