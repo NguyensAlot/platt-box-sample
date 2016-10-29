@@ -40,6 +40,7 @@
     list-style: none;
 }
 #side-nav ul li {
+    margin-top: 20px;
     line-height: 30px;
     cursor: pointer;
 }
