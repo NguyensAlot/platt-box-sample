@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <title>Platt Box</title>
     <script src="https://use.fontawesome.com/f059ef59d8.js"></script>
+    <link href="../styles/nav-bar.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <style>
         body {
             width: 100%;
             margin: 0;
             padding: 0;
+            font-family: 'Comfortaa', cursive;
         }
         .content, .nav-bar-content {
             width: 1080px;
@@ -17,54 +20,58 @@
         .nav-bar-content {
             height: 70px;
         }
-        /* nav-bar */
-        header {
-            height: 70px;
-            background-color: #017F40;
-            box-shadow: 0 0 5px 0;
+        .separation-line {
+            width: 100%;
+            border-bottom: 2px lightgray solid;
+            margin: 20px 5px;
         }
-        #logo {
-            height: 100%;
+        #user-panel {
+            width: 30%;
+            height: 800px;
             float: left;
+
         }
-        #search {
-            width: 350px;
-            height: 100%;
-            position: relative;
+
+        #user-info {
+            line-height: 15px;
+        }
+        #user-info p {
+            margin: auto;
+        }
+        #user-info #user-email {
+            color: gray;
+            font-style: italic;
+            font-size: .75em;
+        }
+        #user-info img {
+            width: 80px;
+            height: 80px;
+            float: left;
+            margin-right: 15px;
+            background-color: lightgray;
+            border-radius: 50px;
+            border: 1px lightgray solid;
+        }
+        #settings {
             float: right;
-            background-color: #01723A;
+            position: relative;
+            top: 0;
+            color: lightgray;
         }
-        /* using font awesome for search icon */
-        #search-icon {
-            color: white;
-            right: 1px;
+        #user-panel ul {
+            padding: 0;
+            color: #78797B;
         }
-        /* */
-        #search-box {
-            width: 75%;
-            height: 97%;
-            padding: 0 20px;
-            background-color: #01723A;
-            border: none;
-            color: white;
-            font-size: 1em;
+        #user-panel li {
+            list-style: none;
+            line-height: 45px;
         }
-        /* remove the default focus border */
-        #search-box:focus {
-            outline: none;
-        }
-        /* change the color of the placeholder */
-        #search-box::-webkit-input-placeholder {
-            color: #039F56;
-        }
-        #search-box:-ms-input-placeholder {
-            color: #039F56;
-        }
-        #search-box:-moz-placeholder {
-            color: #039F56;
-        }
-        #search-box::-moz-placeholder {
-            color: #039F56;
+
+        #content-panel {
+            width: 65%;
+            height: 800px;
+            float: right;
+            background-color: lemonchiffon;
         }
     </style>
 </head>
@@ -82,9 +89,33 @@
 
         </div>
     </header>
-
+    <!--content-->
     <div class="content">
+        <div id="user-panel">
+            <div id="user-info">
+                <img src="../images/me.jpg">
+                <i id="settings" class="fa fa-cog fa-2x"></i>
+                <br><br>
+                <p id="directory-name"><strong>Nike Inc.</strong></p>
+                <p id="user-email">emailaddress@domain.com</p>
+            </div>
+            <br>
+            <div class="separation-line"></div>
+            <ul>
+                <li>
+                    <i class="fa fa-clock-o"></i>
+                    Recent
+                </li>
+                <li>Files</li>
+                <li>Folders</li>
+                <li>Photos</li>
+                <li>Notification</li>
+                <li>Sign Out</li>
+            </ul>
+        </div>
+        <div id="content-panel">
 
+        </div>
     </div>
 </body>
 </html>

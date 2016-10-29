@@ -1,0 +1,54 @@
+/* nav-bar */
+header {
+    height: 70px;
+    background-color: #017F40;
+    box-shadow: 0 0 5px 0;
+    margin-bottom: 30px;
+    z-index: 999;
+}
+#logo {
+    height: 100%;
+    float: left;
+}
+#search {
+    width: 350px;
+    height: 100%;
+    position: relative;
+    float: right;
+    background-color: #01723A;
+}
+/* using font awesome for search icon */
+#search-icon {
+    color: white;
+    right: 0;
+}
+#search-box {
+    width: 75%;
+    height: 97%;
+    padding: 0 20px;
+    background-color: #01723A;
+    border: none;
+    color: white;
+    font-size: 1em;
+}
+/* remove the default focus border */
+#search-box:focus {
+    outline: none;
+}
+/* change the color of the placeholder */
+#search-box::-webkit-input-placeholder {
+    color: #039F56;
+    font-family: 'Comfortaa', cursive;
+}
+#search-box:-ms-input-placeholder {
+    color: #039F56;
+    font-family: 'Comfortaa', cursive;
+}
+#search-box:-moz-placeholder {
+    color: #039F56;
+    font-family: 'Comfortaa', cursive;
+}
+#search-box::-moz-placeholder {
+    color: #039F56;
+    font-family: 'Comfortaa', cursive;
+}
