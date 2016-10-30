@@ -1,4 +1,4 @@
-/* nav-bar */
+/* header css */
 header {
     min-width: 1080px;
     height: 70px;
@@ -18,7 +18,6 @@ header {
     float: right;
     background-color: #01723A;
 }
-/* using font awesome for search icon */
 #search-icon {
     color: white;
     right: 0;

@@ -8,94 +8,38 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
     <link rel="stylesheet" type="text/css" href="../styles/header.css">
     <link rel="stylesheet" type="text/css" href="../styles/side-nav.css">
+    <link rel="stylesheet" type="text/css" href="../styles/content.css">
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
     <script src="https://use.fontawesome.com/f059ef59d8.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script rel="script" type="text/javascript" src="../scripts/jquery.tablesorter.min.js"></script>
     <script rel="script" type="text/javascript" src="../scripts/main.js"></script>
-
-
-    <style>
-        body {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            font-family: 'Comfortaa', cursive;
-        }
-        .content, .nav-bar-content {
-            width: 1080px;
-            margin: auto;
-        }
-        .nav-bar-content {
-            height: 70px;
-        }
-        .separation-line {
-            width: 100%;
-            border-bottom: 1px solid lightgray;
-            margin: 0 5px 0 5px;
-        }
-        .directory-name {
-            font-weight: 900;
-            color: black;
-        }
-        .side-nav-active {
-            background-color: #ECECEC;
-            border-radius: 25px;
-        }
-        .large-column {
-            width: 500px;
-        }
-        .cursor-pointer {
-            cursor: pointer;
-        }
-        #content-panel {
-            width: 65%;
-            height: 800px;
-            margin: 0;
-            float: right;
-        }
-        #content-header {
-            height: 100px;
-        }
-        #content-header #directory {
-            color: lightgray;
-            font-weight: 900;
-            float: left;
-        }
-        #content-header #content-actions {
-            float: right;
-        }
-        #content-header #content-actions a {
-            color: #017F40;
-        }
-        #content-header #content-actions a:hover {
-            cursor: pointer;
-        }
-        #content-header #content-actions a:focus {
-            background-color: black;
-        }
-        #files-table {
-            width: 100%;
-            position:relative;
-            margin: 0;
-            top: 35px;
-        }
-        #files-table tr {
-            line-height: 45px;
-            border-bottom: 1px solid lightgray;
-        }
-    </style>
 </head>
 <body>
     <!--nav-bar-->
     <header>
         <div class="nav-bar-content">
             <div id="logo">
-                <a href="#"><img src="../images/logo.png" alt="Platt Box"></a>
+                <a href="#"><img src="../images/platt-box-logo.png" alt="Platt Box"></a>
             </div>
             <div id="search">
                 <input id="search-box" type="text" placeholder="Search Customers">
                 <i id="search-icon" class="fa fa-search fa-1x" aria-hidden="true"></i>
+                <div id="top-nav-btn" class="fa fa-bars" aria-hidden="true">
+                    <div class="side-nav">
+                        <div class="side-nav-title">
+                            Menu
+                            <i id="close-side-nav" class="fa fa-times cursor-pointer" aria-hidden="true"></i>
+                        </div>
+                        <a href="#">Recent</a>
+                        <a href="#">Files</a>
+                        <a href="#">Folders</a>
+                        <a href="#">Photos</a>
+                        <a href="#">Notifications</a>
+                        <a href="#">Sign Out</a>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -157,6 +101,7 @@
                     <a id="addDir" class="fa fa-folder-o fa-2x" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Add Folder" aria-hidden="true"></a>
                     <a class="fa fa-trash-o fa-2x" data-toggle="popover" data-trigger="hover" data-placement="bottom"  data-content="Delete" aria-hidden="true"></a>
                 </div>
+                <!--WIP: sort table-->
                 <table id="files-table" class="tablesorter">
                     <thead>
                         <tr>
@@ -175,6 +120,7 @@
                             <td>04-14-2016</td>
                             <td class="fa fa-ellipsis-v cursor-pointer popover-menu" data-toggle="popover" data-placement="bottom" data-content="Rename" aria-hidden="true"></td>
                         </tr>
+                        <!--WIP: allow for folder renaming-->
                         <tr>
                             <td class="fa fa-folder" aria-hidden="true"></td>
                             <td id="folder1">#Name</td>
@@ -184,8 +130,8 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
-        </div>
+            </div><!--content-header-->
+        </div><!--content-panel-->
     </div>
 
 </body>

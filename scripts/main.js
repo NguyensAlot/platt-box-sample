@@ -34,11 +34,19 @@ function startNotificationTimer() {
 }
 
 function addEventListener() {
-    document.getElementById("addFile").addEventListener('click', addMockFile, false);
-    document.getElementById("addDir").addEventListener('click', addMockDirectory, false);
+    document.getElementById('addFile').addEventListener('click', addMockFile, false);
+    document.getElementById('addDir').addEventListener('click', addMockDirectory, false);
+    /*
     document.getElementById("files-table").addEventListener('click', function(e) {
         console.log(e);
     },false);
+    */
+    document.getElementById('top-nav-btn').addEventListener('click', function() {
+        $('.side-nav').css('width', '250px');
+    });
+    document.getElementById('close-side-nav').addEventListener('click', function() {
+        $('.side-nav').css('width', '0px');
+    })
 }
 
 // add mock data

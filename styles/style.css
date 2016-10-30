@@ -1,0 +1,120 @@
+/* general css, classes and media queries */
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', cursive;
+}
+div, a {
+    font-family: 'Comfortaa', cursive;
+}
+.content, .nav-bar-content {
+    width: 1080px;
+    margin: auto;
+}
+.nav-bar-content {
+    height: 70px;
+}
+.separation-line {
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    margin: 0 5px 0 5px;
+}
+.directory-name {
+    font-weight: 900;
+    color: black;
+}
+.side-nav-active {
+    background-color: #ECECEC;
+    border-radius: 25px;
+}
+.large-column {
+    min-width: 200px;
+    width: 70%;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+#top-nav-btn {
+    display: none;
+}
+.side-nav {
+    background-color: white;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.side-nav-title {
+    height: 70px;
+    background-color: #017F40;
+    font-size: 2em;
+}
+.side-nav a {
+    text-decoration: none;
+    font-size: 2em;
+    display: block;
+    border-bottom: 1px solid lightgray;
+    line-height: 40px;
+}
+
+@media only screen and (max-width: 1080px) {
+    .content, .nav-bar-content {
+        min-width: 600px;
+        width: 100%;
+        margin: auto
+    }
+    #top-nav-btn {
+        width: 250px;
+        display: inline;
+        color: white;
+        right: 0;
+        margin-left: 10px;
+    }
+    header {
+        min-width: 480px;
+        height: 70px;
+        background-color: #017F40;
+        box-shadow: 0 0 5px 0;
+        z-index: 999;
+    }
+    #side-nav, #user-info, #notification-alert {
+        display: none;
+    }
+    #content-panel {
+        width: 100%;
+        float: left;
+    }
+    #content-header {
+        margin: 0 20px;
+    }
+}
+
+@media only screen and (max-device-width: 480px) {
+    .nav-bar-content {
+        min-width: 300px;
+    }
+    header {
+        position: fixed;
+        min-width: 300px;
+        height: 70px;
+        background-color: #017F40;
+        box-shadow: 0 0 5px 0;
+        z-index: 999;
+    }
+    #logo a img{
+        background: src("")
+    }
+    #search {
+        min-width: 50px;
+        background: transparent;
+    }
+    #search-box {
+        display: none;
+    }
+
+}

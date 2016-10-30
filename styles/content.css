@@ -1,0 +1,36 @@
+/* content panel css */
+#content-panel {
+    width: 70%;
+    margin: 0;
+    float: right;
+}
+#content-header {
+    height: 100px;
+}
+#content-header #directory {
+    color: lightgray;
+    font-weight: 900;
+    float: left;
+}
+#content-header #content-actions {
+    float: right;
+}
+#content-header #content-actions a {
+    color: #017F40;
+}
+#content-header #content-actions a:hover {
+    cursor: pointer;
+}
+#content-header #content-actions a:focus {
+    background-color: black;
+}
+#files-table {
+    width: 100%;
+    position:relative;
+    margin: 0;
+    top: 35px;
+}
+#files-table tr {
+    line-height: 45px;
+    border-bottom: 1px solid lightgray;
+}
