@@ -5,6 +5,7 @@
 
 
 $(document).ready(function() {
+    $('#files-table').tablesorter();
     addPopover();
     addSideNavHighlight();
     startNotificationTimer();
@@ -35,15 +36,19 @@ function startNotificationTimer() {
 function addEventListener() {
     document.getElementById("addFile").addEventListener('click', addMockFile, false);
     document.getElementById("addDir").addEventListener('click', addMockDirectory, false);
+    document.getElementById("files-table").addEventListener('click', function(e) {
+        console.log(e);
+    },false);
 }
 
 // add mock data
 function addMockFile() {
+    var date = new Date();
     $('#files-table tbody').append("<tr>" +
         "<td class='fa fa-file-text-o'></td>" +
         "<td>#Name</td>" +
         "<td>#Size</td>" +
-        "<td>#Date</td>" +
+        "<td>"+date.mmddyyyy()+"</td>" +
         "<td class='fa fa-ellipsis-v cursor-pointer' aria-hidden='true'></td></td>");
 }
 
@@ -56,6 +61,9 @@ function addMockDirectory() {
         "<td class='fa fa-ellipsis-v cursor-pointer' aria-hidden='true'></td></td>");
 }
 
-function popoverMenu() {
+Date.prototype.mmddyyyy = function() {
+    var mm = this.getMonth() + 1; // getMonth() is zero-based
+    var dd = this.getDate();
 
-}
+    return [mm, '-', dd, '-', this.getFullYear()].join('');
+};

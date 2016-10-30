@@ -11,7 +11,9 @@
     <script src="https://use.fontawesome.com/f059ef59d8.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script rel="script" type="text/javascript" src="../scripts/jquery.tablesorter.min.js"></script>
     <script rel="script" type="text/javascript" src="../scripts/main.js"></script>
+
 
     <style>
         body {
@@ -155,13 +157,13 @@
                     <a id="addDir" class="fa fa-folder-o fa-2x" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Add Folder" aria-hidden="true"></a>
                     <a class="fa fa-trash-o fa-2x" data-toggle="popover" data-trigger="hover" data-placement="bottom"  data-content="Delete" aria-hidden="true"></a>
                 </div>
-                <table id="files-table">
+                <table id="files-table" class="tablesorter">
                     <thead>
                         <tr>
                             <th class="small-column"></th>
-                            <th class="large-column">Name</th>
-                            <th class="small-column">Size</th>
-                            <th class="small-column">Date</th>
+                            <th class="large-column sortable">Name</th>
+                            <th class="small-column sortable">Size</th>
+                            <th class="small-column sortable">Date</th>
                             <th class="small-column"></th>
                         </tr>
                     </thead>
@@ -170,14 +172,14 @@
                             <td class="fa fa-file-text-o" aria-hidden="true"></td>
                             <td>#Name</td>
                             <td>#Size</td>
-                            <td>#Date</td>
-                            <td class="fa fa-ellipsis-v cursor-pointer popover-menu" data-toggle="popover" data-placement="bottom" data-content="nothing" aria-hidden="true"></td>
+                            <td>04-14-2016</td>
+                            <td class="fa fa-ellipsis-v cursor-pointer popover-menu" data-toggle="popover" data-placement="bottom" data-content="Rename" aria-hidden="true"></td>
                         </tr>
                         <tr>
                             <td class="fa fa-folder" aria-hidden="true"></td>
-                            <td>#Name</td>
+                            <td id="folder1">#Name</td>
                             <td>#Size</td>
-                            <td>#Date</td>
+                            <td></td>
                             <td class="fa fa-ellipsis-v cursor-pointer popover-menu" aria-hidden="true"></td>
                         </tr>
                     </tbody>
