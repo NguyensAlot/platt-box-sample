@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>Platt Box</title>
     <link rel="icon" href="../images/platt-logo.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
     <link rel="stylesheet" type="text/css" href="../styles/header.css">
-    <link rel="stylesheet" type="text/css" href="../styles/side-nav.css">
     <link rel="stylesheet" type="text/css" href="../styles/content.css">
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <link rel="stylesheet" type="text/css" href="../styles/mobile-style.css">
     <script src="https://use.fontawesome.com/f059ef59d8.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -17,37 +18,63 @@
     <script rel="script" type="text/javascript" src="../scripts/main.js"></script>
 </head>
 <body>
+    <div class="modal"></div>
     <!--nav-bar-->
     <header>
         <div class="nav-bar-content">
             <div id="logo">
-                <a href="#"><img src="../images/platt-box-logo.png" alt="Platt Box"></a>
+                <a href="#" class="desktop"><img src="../images/platt-box-logo-sm.png"></a>
             </div>
             <div id="search">
                 <input id="search-box" type="text" placeholder="Search Customers">
                 <i id="search-icon" class="fa fa-search fa-1x" aria-hidden="true"></i>
-                <div id="top-nav-btn" class="fa fa-bars" aria-hidden="true">
-                    <div class="side-nav">
-                        <div class="side-nav-title">
-                            Menu
-                            <i id="close-side-nav" class="fa fa-times cursor-pointer" aria-hidden="true"></i>
-                        </div>
-                        <a href="#">Recent</a>
-                        <a href="#">Files</a>
-                        <a href="#">Folders</a>
-                        <a href="#">Photos</a>
-                        <a href="#">Notifications</a>
-                        <a href="#">Sign Out</a>
+                <i id="top-nav-btn" class="fa fa-bars cursor-pointer" aria-hidden="true"></i>
+                <!--<div class="side-nav">
+                    <div class="side-nav-title">
+                        Menu
+                        <i id="close-side-nav" class="fa fa-times cursor-pointer" aria-hidden="true"></i>
                     </div>
-                </div>
+                    <div></div>
+                    <a href="#">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        Recent
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-file-o" aria-hidden="true"></i>
+                        Files
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-folder" aria-hidden="true"></i>
+                        Folders
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                        Photos
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-bell-o" aria-hidden="true"></i>
+                        Notifications
+                        <div class="notification-alert">0</div>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        Sign Out
+                    </a>
+                </div>-->
             </div>
-
         </div>
     </header>
     <!--content-->
+
     <div class="content">
+        <div id="id-banner" class="mobile"></div>
         <!--side-nav-->
-        <div id="side-nav">
+
+        <div id="side-nav" class="side-nav">
+            <div class="side-nav-title">
+                Menu
+                <i id="close-side-nav" class="fa fa-times cursor-pointer" aria-hidden="true"></i>
+            </div>
             <div id="user-info">
                 <img src="../images/me.jpg">
                 <i id="settings" class="fa fa-cog fa-2x"></i>
@@ -56,33 +83,33 @@
                 <p id="user-email">emailaddress@domain.com</p>
             </div>
             <div class="separation-line"></div>
-            <ul id="side-nav-content">
-                <li class="side-nav-text">
+            <div id="side-nav-content">
+                <a class="side-nav-text">
                     <i class="fa fa-clock-o" aria-hidden="true"></i>
                     Recent
-                </li>
-                <li class="side-nav-text">
+                </a>
+                <a class="side-nav-text">
                     <i class="fa fa-file-o" aria-hidden="true"></i>
                     Files
-                </li>
-                <li class="side-nav-text">
+                </a>
+                <a class="side-nav-text">
                     <i class="fa fa-folder" aria-hidden="true"></i>
                     Folders
-                </li>
-                <li class="side-nav-text">
+                </a>
+                <a class="side-nav-text">
                     <i class="fa fa-file-image-o" aria-hidden="true"></i>
                     Photos
-                </li>
-                <li class="side-nav-text">
+                </a>
+                <a class="side-nav-text">
                     <i class="fa fa-bell-o" aria-hidden="true"></i>
                     Notification
-                    <div id="notification-alert">0</div>
-                </li>
-                <li class="side-nav-text">
+                    <div id="notification-alert" class="notification-alert">0</div>
+                </a>
+                <a class="side-nav-text">
                     <i class="fa fa-sign-out" aria-hidden="true"></i>
                     Sign Out
-                </li>
-            </ul>
+                </a>
+            </div>
         </div>
         <!--main content-->
         <div id="content-panel">

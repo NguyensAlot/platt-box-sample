@@ -1,3 +1,67 @@
+/* side-nav css */
+.side-nav {
+    position: fixed;
+    width: 250px;
+    margin-left: 10px;
+    float: left;
+}
+
+#user-info {
+    line-height: 15px;
+    height: 110px;
+}
+
+#user-info p {
+    margin: auto;
+}
+#user-info #user-email {
+    color: dimgray;
+    font-style: italic;
+    font-size: .75em;
+}
+#user-info img {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-right: 15px;
+    background-color: lightgray;
+    border-radius: 50px;
+    border: 1px solid lightgray;
+}
+#settings {
+    float: right;
+    position: relative;
+    top: 0;
+    color: dimgray;
+    cursor: pointer;
+}
+#side-nav-content {
+    padding: 0;
+}
+#side-nav-content a {
+    margin-top: 20px;
+    line-height: 30px;
+    display: block;
+    color: dimgray;
+    text-decoration: none;
+}
+#side-nav-content i {
+    margin-left: 10px;
+    padding-right: 20px;
+}
+.notification-alert {
+    width: 30px;
+    height: 30px;
+    background-color: #017F40;
+    border-radius: 15px;
+    float: right;
+    margin-top: 0;
+    text-align: center;
+    color: white;
+    line-height: 30px;
+    cursor: pointer;
+}
+
 /* content panel css */
 #content-panel {
     width: 70%;

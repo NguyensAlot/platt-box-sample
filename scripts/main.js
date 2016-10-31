@@ -20,7 +20,7 @@ function addPopover() {
 function addSideNavHighlight() {
     // side nav highlight
     $('.side-nav-text').click(function(e) {
-        $('li').removeClass('side-nav-active');
+        $('a').removeClass('side-nav-active');
         $(this).toggleClass('side-nav-active');
     });
 }
@@ -41,11 +41,19 @@ function addEventListener() {
         console.log(e);
     },false);
     */
+    // sliding side nav open/close
     document.getElementById('top-nav-btn').addEventListener('click', function() {
-        $('.side-nav').css('width', '250px');
+        if ($(window).width() > 480) {
+            $('.side-nav').css('width', '250px');
+        }
+        else {
+            $('.side-nav').css('width', '80%');
+        }
+        $('.modal').css('display', 'block');
     });
     document.getElementById('close-side-nav').addEventListener('click', function() {
         $('.side-nav').css('width', '0px');
+        $('.modal').css('display', 'none');
     })
 }
 

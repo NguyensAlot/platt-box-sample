@@ -4,9 +4,20 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Comfortaa', cursive;
+    overflow-y: auto;
 }
 div, a {
     font-family: 'Comfortaa', cursive;
+}
+.modal {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: 1;
 }
 .content, .nav-bar-content {
     width: 1080px;
@@ -38,31 +49,48 @@ div, a {
 #top-nav-btn {
     display: none;
 }
-.side-nav {
-    background-color: white;
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-.side-nav-title {
-    height: 70px;
-    background-color: #017F40;
-    font-size: 2em;
-}
-.side-nav a {
-    text-decoration: none;
-    font-size: 2em;
-    display: block;
-    border-bottom: 1px solid lightgray;
-    line-height: 40px;
+
+
+.mobile {
+    display: none;
 }
 
 @media only screen and (max-width: 1080px) {
+    .side-nav {
+        background-color: white;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        right: 0;
+        overflow-x: hidden;
+        transition: 0.25s;
+    }
+    .side-nav-title {
+        height: 70px;
+        background-color: #017F40;
+        font-size: 1.5em;
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+    .side-nav-title i {
+        right: 0;
+    }
+    .side-nav a {
+        color: dimgray;
+        text-decoration: none;
+        font-size: 1.5em;
+        display: block;
+        border-bottom: 1px solid lightgray;
+        line-height: 40px;
+        padding-left: 30px;
+    }
+    .side-nav i {
+        margin-right: 20px;
+    }
+
     .content, .nav-bar-content {
         min-width: 600px;
         width: 100%;
@@ -80,10 +108,7 @@ div, a {
         height: 70px;
         background-color: #017F40;
         box-shadow: 0 0 5px 0;
-        z-index: 999;
-    }
-    #side-nav, #user-info, #notification-alert {
-        display: none;
+        z-index: 1;
     }
     #content-panel {
         width: 100%;
@@ -94,27 +119,3 @@ div, a {
     }
 }
 
-@media only screen and (max-device-width: 480px) {
-    .nav-bar-content {
-        min-width: 300px;
-    }
-    header {
-        position: fixed;
-        min-width: 300px;
-        height: 70px;
-        background-color: #017F40;
-        box-shadow: 0 0 5px 0;
-        z-index: 999;
-    }
-    #logo a img{
-        background: src("")
-    }
-    #search {
-        min-width: 50px;
-        background: transparent;
-    }
-    #search-box {
-        display: none;
-    }
-
-}
