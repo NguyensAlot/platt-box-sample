@@ -25,6 +25,7 @@ function addSideNavHighlight() {
     });
 }
 
+// increment notification alert to show functionality
 function startNotificationTimer() {
     var counter = 0;
     var alertNum = document.getElementById('notification-alert');
@@ -36,11 +37,6 @@ function startNotificationTimer() {
 function addEventListener() {
     document.getElementById('addFile').addEventListener('click', addMockFile, false);
     document.getElementById('addDir').addEventListener('click', addMockDirectory, false);
-    /*
-    document.getElementById("files-table").addEventListener('click', function(e) {
-        console.log(e);
-    },false);
-    */
     // sliding side nav open/close
     document.getElementById('top-nav-btn').addEventListener('click', function() {
         if ($(window).width() > 480) {
@@ -77,6 +73,7 @@ function addMockDirectory() {
         "<td class='fa fa-ellipsis-v cursor-pointer' aria-hidden='true'></td></td>");
 }
 
+// add a mm-dd-yyyy function to the Date prototype
 Date.prototype.mmddyyyy = function() {
     var mm = this.getMonth() + 1; // getMonth() is zero-based
     var dd = this.getDate();

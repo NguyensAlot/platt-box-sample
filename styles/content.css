@@ -43,6 +43,7 @@
     line-height: 30px;
     display: block;
     color: dimgray;
+    cursor: pointer;
     text-decoration: none;
 }
 #side-nav-content i {

@@ -1,16 +1,18 @@
 /* mobile site style */
 @media only screen and (max-device-width: 480px) {
     .large-column {
-        min-width: 50px;
-        width: 70%;
+        width: 60%;
     }
     .side-nav-title {
         font-size: 40px;
     }
 
     .side-nav a {
-        font-size: 1em;
+        font-size: 2em;
         line-height: 75px;
+    }
+    #user-info {
+        font-size: 2em;
     }
 
     .nav-bar-content {
@@ -52,6 +54,6 @@
     }
     #content-panel {
         margin-top: 50px;
-        font-size: 2em;
+        font-size: 1.5em;
     }
 }
