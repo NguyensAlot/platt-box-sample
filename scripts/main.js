@@ -37,7 +37,7 @@ function startNotificationTimer() {
 function addEventListener() {
     document.getElementById('addFile').addEventListener('click', addMockFile, false);
     document.getElementById('addDir').addEventListener('click', addMockDirectory, false);
-    // sliding side nav open/close
+    // hidden side nav open/close
     document.getElementById('top-nav-btn').addEventListener('click', function() {
         if ($(window).width() > 480) {
             $('.side-nav').css('width', '250px');
